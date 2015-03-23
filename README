@@ -1,0 +1,24 @@
+[使い方]
+    python3 feature_extract.py (filename of new entry)
+
+[ディレクトリ構成]
+    - entries
+        - training
+            - entry-01-01.txt
+            - ...
+        - test
+            - entry-02-01.txt
+    - feature_extract.py
+
+[事前準備]
+    - ブログ記事を取得し、1記事あたり1つのファイルに格納して entries 直下に配置する。ファイル名を entry- で始まるものにする。
+    - separate_entries.py を使って、これらを training と test ディレクトリ以下にランダムに分類する。 
+
+[説明]
+- entries/training に格納されている記事をクラスタリングする。
+- 引数で指定された新しい記事がどのクラスタに最も近いかを判別して、同一クラスタ内の文書との類似度を求め、類似度の近い順にソートして出力する。
+
+[参考]
+- Building Machine Learning Systems with Python (Packt Publishing, 2013)
+    - "Chapter3. Clustering - Finding Related Posts" を手本に、自分で実装してみたもの。
+
